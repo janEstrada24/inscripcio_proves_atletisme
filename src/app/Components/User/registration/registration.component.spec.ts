@@ -34,6 +34,9 @@ describe('RegistrationComponent', () => {
 
   it('Has identity data', () => {
     expect(getNthLabel(0).textContent).toBe("DNI: ");
-
+    expect(getNthLabel(1).textContent).toBe("Codi de federat: ");
+    expect(getNthLabel(2).textContent).toBe("Nom i cognoms: ");
+    expect(getNthLabel(3).textContent).toBe("Telèfon: ");
+    expect(getNthLabel(4).textContent).toBe("Email: ");
   });
 });
