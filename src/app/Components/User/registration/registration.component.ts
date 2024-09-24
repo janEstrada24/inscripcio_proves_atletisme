@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
-
+  dni!: number;
+  codiFederat!: number;
+  nomICognoms!: string;
+  telefon!: number;
+  email!: string;
 }
