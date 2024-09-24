@@ -40,9 +40,8 @@ describe('RegistrationComponent', () => {
   });
 
   it('should render title Inscripcio proves atletisme', () => {
-    const fixture = TestBed.createComponent(RegistrationComponent);
     fixture.detectChanges();
-    expect(compiled.querySelector('h1')?.textContent).toContain('Inscripció proves atletisme');
+    expect(compiled.querySelectorAll('h1')?.[0].textContent).toContain('Inscripció proves atletisme');
   });
 
   it('should create', () => {
@@ -50,6 +49,8 @@ describe('RegistrationComponent', () => {
   });
 
   it('Has identity data', () => {
+    expect(compiled.querySelectorAll('h1')?.[0].textContent).toContain('Dades identificatives');
+
     expect(getNthLabel(0).textContent).toBe("DNI: ");
     expect(getNthLabel(1).textContent).toBe("Codi de federat: ");
     expect(getNthLabel(2).textContent).toBe("Nom i cognoms: ");
