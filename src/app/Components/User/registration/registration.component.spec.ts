@@ -7,6 +7,10 @@ let fixture: ComponentFixture<RegistrationComponent>;
 let compiled: HTMLElement;
 const letters = "TRWAGMYFPDXBNJZSQVHLCKE";
 
+function getNthHeading(index:number) {
+  return compiled.querySelectorAll("h1")[index]; 
+}
+
 function getNthLabel(index:number) {
   return compiled.querySelectorAll("label")[index]; 
 }
@@ -41,7 +45,7 @@ describe('RegistrationComponent', () => {
 
   it('should render title Inscripcio proves atletisme', () => {
     fixture.detectChanges();
-    expect(compiled.querySelectorAll('h1')?.[0].textContent).toContain('Inscripció proves atletisme');
+    expect(getNthHeading(0).textContent).toContain('Inscripció proves atletisme');
   });
 
   it('should create', () => {
@@ -50,7 +54,7 @@ describe('RegistrationComponent', () => {
 
   it('Has identity data', () => {
     fixture.detectChanges();
-    expect(compiled.querySelectorAll('h1')?.[1].textContent).toContain('Dades identificatives');
+    expect(getNthHeading(1).textContent).toContain('Dades identificatives');
 
     expect(getNthLabel(0).textContent).toBe("DNI: ");
     expect(getNthLabel(1).textContent).toBe("Codi de federat: ");
@@ -68,7 +72,7 @@ describe('RegistrationComponent', () => {
   });
 
   it('Register smooth meters data', () => {
-    expect(compiled.querySelectorAll('h1')?.[2].textContent).toContain('Inscripció');
+    expect(getNthHeading(2).textContent).toContain('Inscripció');
   });
 
   it('Has a register button', () => {
