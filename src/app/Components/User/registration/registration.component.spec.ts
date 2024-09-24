@@ -7,6 +7,14 @@ describe('RegistrationComponent', () => {
   let fixture: ComponentFixture<RegistrationComponent>;
   let compiled: HTMLElement;
   
+  function getNthLabel(index:number) {
+    return compiled.querySelectorAll("label")[index]; 
+  }
+
+  function getInputFromLabel(labelIndex:number) {
+    return getNthLabel(labelIndex)!.querySelector("input");
+  }
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RegistrationComponent]
