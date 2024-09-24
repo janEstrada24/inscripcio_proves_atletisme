@@ -31,6 +31,7 @@ describe('RegistrationComponent', () => {
   });
 
   it('Has identity data', () => {
-    
+    expect(getNthLabel(0).textContent).toBe("DNI: ");
+
   });
 });
