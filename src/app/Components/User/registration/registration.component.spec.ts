@@ -28,6 +28,12 @@ describe('RegistrationComponent', () => {
     compiled = fixture.nativeElement;
   });
 
+  it('should render title Inscripcio proves atletisme', () => {
+    const fixture = TestBed.createComponent(RegistrationComponent);
+    fixture.detectChanges();
+    expect(compiled.querySelector('h1')?.textContent).toContain('Inscripció proves atletisme');
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
