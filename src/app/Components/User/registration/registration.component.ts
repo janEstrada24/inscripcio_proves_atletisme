@@ -19,7 +19,6 @@ export class RegistrationComponent {
   setDniLetter() {
     const dniNumber = parseInt(this.dni, 10);
     const letters = "TRWAGMYFPDXBNJZSQVHLCKE";
-    const letter = letters.charAt(dniNumber % 23);
-    return letter;
+    this.dniLetter = letters.charAt(dniNumber % 23);
   }
 }

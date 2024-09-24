@@ -1,8 +1,8 @@
 <h1>Inscripció proves atletisme</h1>
 
 <label>DNI: 
-    <input type="text">
-    <p></p>
+    <input type="text" (change)="setDniLetter()">
+    <p [(ngModel)]="dniLetter" ></p>
 </label>
 
 <label>Codi de federat: 
