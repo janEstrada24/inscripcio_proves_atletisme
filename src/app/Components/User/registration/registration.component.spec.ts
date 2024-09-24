@@ -5,7 +5,8 @@ import { RegistrationComponent } from './registration.component';
 describe('RegistrationComponent', () => {
   let component: RegistrationComponent;
   let fixture: ComponentFixture<RegistrationComponent>;
-
+  let compiled: HTMLElement;
+  
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RegistrationComponent]
@@ -19,5 +20,9 @@ describe('RegistrationComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Has identity data', () => {
+    
   });
 });
