@@ -5,6 +5,7 @@ import { RegistrationComponent } from './registration.component';
 let component: RegistrationComponent;
 let fixture: ComponentFixture<RegistrationComponent>;
 let compiled: HTMLElement;
+const letters = "TRWAGMYFPDXBNJZSQVHLCKE";
 
 function getNthLabel(index:number) {
   return compiled.querySelectorAll("label")[index]; 
@@ -16,6 +17,12 @@ function getInputFromLabel(labelIndex:number) {
 
 function getParagraphFromLabel(labelIndex:number) {
   return getNthLabel(labelIndex)!.querySelector("p");
+}
+
+function getDNILetter(dni: string) {
+  const dniNumber = parseInt(dni, 10);
+  const letter = letters.charAt(dniNumber % 23);
+  return letter;
 }
 
 describe('RegistrationComponent', () => {
