@@ -2,18 +2,19 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegistrationComponent } from './registration.component';
 
-describe('RegistrationComponent', () => {
-  let component: RegistrationComponent;
-  let fixture: ComponentFixture<RegistrationComponent>;
-  let compiled: HTMLElement;
-  
-  function getNthLabel(index:number) {
-    return compiled.querySelectorAll("label")[index]; 
-  }
+let component: RegistrationComponent;
+let fixture: ComponentFixture<RegistrationComponent>;
+let compiled: HTMLElement;
 
-  function getInputFromLabel(labelIndex:number) {
-    return getNthLabel(labelIndex)!.querySelector("input");
-  }
+function getNthLabel(index:number) {
+  return compiled.querySelectorAll("label")[index]; 
+}
+
+function getInputFromLabel(labelIndex:number) {
+  return getNthLabel(labelIndex)!.querySelector("input");
+}
+
+describe('RegistrationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
