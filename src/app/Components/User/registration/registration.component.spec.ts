@@ -14,6 +14,10 @@ function getInputFromLabel(labelIndex:number) {
   return getNthLabel(labelIndex)!.querySelector("input");
 }
 
+function getParagraphFromLabel(labelIndex:number) {
+  return getNthLabel(labelIndex)!.querySelector("p");
+}
+
 describe('RegistrationComponent', () => {
 
   beforeEach(async () => {
@@ -51,5 +55,6 @@ describe('RegistrationComponent', () => {
     expect(getInputFromLabel(3)).toBeTruthy();
     expect(getInputFromLabel(4)).toBeTruthy();
 
+    expect(getParagraphFromLabel(0)).toBeTruthy();
   });
 });
