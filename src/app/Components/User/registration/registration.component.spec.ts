@@ -67,6 +67,10 @@ describe('RegistrationComponent', () => {
     expect(getParagraphFromLabel(0)).toBeTruthy();
   });
 
+  it('Register smooth meters data', () => {
+
+  });
+
   it('Has a register button', () => {
     fixture.detectChanges();
     expect(compiled.querySelector('button')?.textContent).toContain('Inscripció');
