@@ -49,7 +49,8 @@ describe('RegistrationComponent', () => {
   });
 
   it('Has identity data', () => {
-    expect(compiled.querySelectorAll('h1')?.[0].textContent).toContain('Dades identificatives');
+    fixture.detectChanges();
+    expect(compiled.querySelectorAll('h1')?.[1].textContent).toContain('Dades identificatives');
 
     expect(getNthLabel(0).textContent).toBe("DNI: ");
     expect(getNthLabel(1).textContent).toBe("Codi de federat: ");
