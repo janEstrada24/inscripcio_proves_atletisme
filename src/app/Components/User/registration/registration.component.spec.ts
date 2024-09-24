@@ -47,6 +47,9 @@ describe('RegistrationComponent', () => {
 
     expect(getInputFromLabel(0)).toBeTruthy();
     expect(getInputFromLabel(1)).toBeTruthy();
+    expect(getInputFromLabel(2)).toBeTruthy();
+    expect(getInputFromLabel(3)).toBeTruthy();
+    expect(getInputFromLabel(4)).toBeTruthy();
 
   });
 });
