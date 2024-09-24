@@ -66,4 +66,9 @@ describe('RegistrationComponent', () => {
 
     expect(getParagraphFromLabel(0)).toBeTruthy();
   });
+
+  it('Has a register button', () => {
+    fixture.detectChanges();
+    expect(compiled.querySelector('button')?.textContent).toContain('Inscripció');
+  });
 });
