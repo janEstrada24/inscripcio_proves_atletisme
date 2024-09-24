@@ -46,5 +46,7 @@ describe('RegistrationComponent', () => {
     expect(getNthLabel(4).textContent).toBe("Email: ");
 
     expect(getInputFromLabel(0)).toBeTruthy();
+    expect(getInputFromLabel(1)).toBeTruthy();
+
   });
 });
