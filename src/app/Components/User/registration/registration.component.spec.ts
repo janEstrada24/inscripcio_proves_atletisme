@@ -68,7 +68,7 @@ describe('RegistrationComponent', () => {
   });
 
   it('Register smooth meters data', () => {
-
+    expect(compiled.querySelectorAll('h1')?.[2].textContent).toContain('Inscripció');
   });
 
   it('Has a register button', () => {
