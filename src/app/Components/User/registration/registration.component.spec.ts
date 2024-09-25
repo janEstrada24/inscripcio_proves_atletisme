@@ -74,11 +74,11 @@ describe('RegistrationComponent', () => {
   it('Register smooth meters data', () => {
     expect(getNthHeading(2).textContent).toContain('Inscripció');
     
-    expect(getNthLabel(5).textContent).toBe("100 smooth meters");
-    expect(getNthLabel(6).textContent).toBe("200 smooth meters");
-    expect(getNthLabel(7).textContent).toBe("400 smooth meters");
-    expect(getNthLabel(8).textContent).toBe("800 smooth meters");
-    expect(getNthLabel(9).textContent).toBe("1000 smooth meters");
+    expect(getNthLabel(5).textContent).toBe("100 smooth meters\n");
+    expect(getNthLabel(6).textContent).toBe("200 smooth meters\n");
+    expect(getNthLabel(7).textContent).toBe("400 smooth meters\n");
+    expect(getNthLabel(8).textContent).toBe("800 smooth meters\n");
+    expect(getNthLabel(9).textContent).toBe("1000 smooth meters\n")
   });
 
   it('Has a register button', () => {
