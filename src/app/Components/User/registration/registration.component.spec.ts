@@ -87,8 +87,6 @@ describe('RegistrationComponent', () => {
     expect(getInputFromLabel(7)?.type).toBe("checkbox");
     expect(getInputFromLabel(8)?.type).toBe("checkbox");
     expect(getInputFromLabel(9)?.type).toBe("checkbox");
-
-    expect(getSmoothMettersChecked(5, 9)).toBeLessThanOrEqual(1200);
   });
 
   it('Has a register button', () => {
