@@ -23,6 +23,18 @@ function getParagraphFromLabel(labelIndex:number) {
   return getNthLabel(labelIndex)!.querySelector("p");
 }
 
+function getSmoothMettersChecked(indexIni:number, indexEnd:number) {
+  let totalSmoothMetters = 0;
+
+  for (let i = indexIni; i <= indexEnd; i++) {
+    if (getInputFromLabel(i)?.checked) {
+      totalSmoothMetters+= parseInt(getInputFromLabel(i)!.value);
+    }
+  }
+
+  return totalSmoothMetters;
+}
+
 function getDNILetter(dni: string) {
   const dniNumber = parseInt(dni, 10);
   const letter = letters.charAt(dniNumber % 23);
@@ -85,6 +97,8 @@ describe('RegistrationComponent', () => {
     expect(getInputFromLabel(7)?.type).toBe("checkbox");
     expect(getInputFromLabel(8)?.type).toBe("checkbox");
     expect(getInputFromLabel(9)?.type).toBe("checkbox");
+
+    expect(getSmoothMettersChecked(5, 9)).toBeLessThanOrEqual(1200);
   });
 
   it('Has a register button', () => {
