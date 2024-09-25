@@ -33,27 +33,27 @@
 <div style="border: 1px solid black;">
     <section><h1>Inscripció</h1></section>
     <label>
-        <input type="checkbox" value="100" class="smoothMeters" (change)="setSmoothMettersChecked()" />
+        <input type="checkbox" [(ngModel)]="smoothMeters100" value="100" class="smoothMeters" (change)="setSmoothMettersChecked()" />
         100 smooth meters
     </label>
     
     <label>
-        <input type="checkbox" value="200" class="smoothMeters" (change)="setSmoothMettersChecked()" />
+        <input type="checkbox" [(ngModel)]="smoothMeters200" value="200" class="smoothMeters" (change)="setSmoothMettersChecked()" />
         200 smooth meters
     </label>
     
     <label>
-        <input type="checkbox" value="400" class="smoothMeters" (change)="setSmoothMettersChecked()" />
+        <input type="checkbox" [(ngModel)]="smoothMeters400" value="400" class="smoothMeters" (change)="setSmoothMettersChecked()" />
         400 smooth meters
     </label>
     
     <label>
-        <input type="checkbox" value="800" class="smoothMeters" (change)="setSmoothMettersChecked()" />
+        <input type="checkbox" [(ngModel)]="smoothMeters800" value="800" class="smoothMeters" (change)="setSmoothMettersChecked()" />
         800 smooth meters
     </label>
     
     <label>
-        <input type="checkbox" value="1000" class="smoothMeters" (change)="setSmoothMettersChecked()" />
+        <input type="checkbox" [(ngModel)]="smoothMeters1000" value="1000" class="smoothMeters" (change)="setSmoothMettersChecked()" />
         1000 smooth meters
     </label>
 </div>
