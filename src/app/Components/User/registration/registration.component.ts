@@ -15,6 +15,7 @@ export class RegistrationComponent {
   nomICognoms!: string;
   telefon!: string;
   email!: string;
+  smoothMeters!: number;
   smoothMeters100: boolean = false;
   smoothMeters200: boolean = false;
   smoothMeters400: boolean = false;
@@ -28,10 +29,34 @@ export class RegistrationComponent {
   }
 
   setSmoothMettersChecked() {
-    console.log(this.smoothMeters100);
-    console.log(this.smoothMeters200);
-    console.log(this.smoothMeters400);
-    console.log(this.smoothMeters800);
-    console.log(this.smoothMeters1000);
+    if(this.smoothMeters100) {
+      this.smoothMeters += 100;
+    } else {
+      this.smoothMeters -= 100;
+    }
+
+    if(this.smoothMeters200) {
+      this.smoothMeters += 200;
+    } else {
+      this.smoothMeters -= 200;
+    }
+
+    if(this.smoothMeters400) {
+      this.smoothMeters += 400;
+    } else {
+      this.smoothMeters -= 400;
+    }
+
+    if(this.smoothMeters800) {
+      this.smoothMeters += 800;
+    } else {
+      this.smoothMeters -= 800;
+    }
+
+    if(this.smoothMeters1000) {
+      this.smoothMeters += 1000;
+    } else {
+      this.smoothMeters -= 1000;
+    }
   }
 }
