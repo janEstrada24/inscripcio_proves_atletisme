@@ -15,7 +15,7 @@ export class RegistrationComponent {
   nomICognoms!: string;
   telefon!: string;
   email!: string;
-  smoothMeters!: number;
+  smoothMeters: number = 0;
   smoothMeters100: boolean = false;
   smoothMeters200: boolean = false;
   smoothMeters400: boolean = false;
@@ -58,5 +58,7 @@ export class RegistrationComponent {
     } else {
       this.smoothMeters -= 1000;
     }
+
+    console.log(this.smoothMeters);
   }
 }
