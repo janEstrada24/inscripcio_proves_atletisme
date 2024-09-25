@@ -3,7 +3,7 @@
 <div style="border: 1px solid black;">
     <section><h1>Dades identificatives</h1></section>
     <label>DNI: 
-        <input type="text" [(ngModel)]="this.dni">
+        <input type="text" [(ngModel)]="this.dni" (change)="setDniLetter()">
         <p></p>
     </label>
     
