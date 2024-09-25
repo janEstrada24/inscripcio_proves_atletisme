@@ -24,8 +24,6 @@ export class RegistrationComponent {
   }
 
   setSmoothMettersChecked() {
-    let totalSmoothMetters = 0;
-
-    this.smoothMeters = totalSmoothMetters;
+    
   }
 }
