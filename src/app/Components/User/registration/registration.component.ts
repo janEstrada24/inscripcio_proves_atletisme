@@ -25,11 +25,11 @@ export class RegistrationComponent {
   letters:string = "TRWAGMYFPDXBNJZSQVHLCKE";
 
   setDniLetter() {
-    if (this.dni.length !== 8) {
-      this.dniLetter = "Invalid DNI";
-    } else {
+    if (this.dni.length === 8 && this.regNumbers.test(this.dni)) {
       const dniNumber = parseInt(this.dni, 10);
       this.dniLetter = this.letters.charAt(dniNumber % 23);
+    } else {
+      this.dniLetter = "Invalid DNI";
     }
   }
 

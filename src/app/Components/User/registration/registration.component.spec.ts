@@ -79,7 +79,7 @@ describe('RegistrationComponent', () => {
 
     inputDni.dispatchEvent(new Event("input"));
     component.setDniLetter();
-    expect(paragraphDniLetter.textContent).toBe(component.getDniLetter());
+    expect(paragraphDniLetter.textContent).toEqual(component.getDniLetter());
 
     inputEmail.dispatchEvent(new Event("input"));
     inputFederationCode.dispatchEvent(new Event("input"));
