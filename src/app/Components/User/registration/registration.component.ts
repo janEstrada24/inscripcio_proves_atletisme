@@ -15,10 +15,17 @@ export class RegistrationComponent {
   nomICognoms!: string;
   telefon!: string;
   email!: string;
+  smoothMeters!: number;
 
   setDniLetter() {
     const dniNumber = parseInt(this.dni, 10);
     const letters = "TRWAGMYFPDXBNJZSQVHLCKE";
     this.dniLetter = letters.charAt(dniNumber % 23);
+  }
+
+  setSmoothMettersChecked() {
+    let totalSmoothMetters = 0;
+
+    this.smoothMeters = totalSmoothMetters;
   }
 }

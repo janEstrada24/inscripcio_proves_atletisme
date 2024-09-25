@@ -23,18 +23,6 @@ function getParagraphFromLabel(labelIndex:number) {
   return getNthLabel(labelIndex)!.querySelector("p");
 }
 
-function getSmoothMettersChecked(indexIni:number, indexEnd:number) {
-  let totalSmoothMetters = 0;
-
-  for (let i = indexIni; i <= indexEnd; i++) {
-    if (getInputFromLabel(i)?.checked) {
-      totalSmoothMetters+= parseInt(getInputFromLabel(i)!.value);
-    }
-  }
-
-  return totalSmoothMetters;
-}
-
 function getDNILetter(dni: string) {
   const dniNumber = parseInt(dni, 10);
   const letter = letters.charAt(dniNumber % 23);
