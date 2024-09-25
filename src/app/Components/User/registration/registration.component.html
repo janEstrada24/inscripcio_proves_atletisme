@@ -4,7 +4,7 @@
     <section><h1>Dades identificatives</h1></section>
     <label>DNI: 
         <input type="text" [(ngModel)]="this.dni" (change)="setDniLetter()">
-        <p></p>
+        <p [(ngModel)]="this.dniLetter"></p>
     </label>
     
     <label>Codi de federat: 

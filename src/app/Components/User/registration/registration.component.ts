@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class RegistrationComponent {
   dni!: string;
   dniLetter!: string;
+  letters:string = "TRWAGMYFPDXBNJZSQVHLCKE";
   codiFederat!: number;
   nomICognoms!: string;
   telefon!: number;
@@ -23,9 +24,11 @@ export class RegistrationComponent {
   smoothMeters1000: boolean = false;
 
   setDniLetter() {
+    if (this.dni.length !== 8) {
+      return;
+    }
     const dniNumber = parseInt(this.dni, 10);
-    const letters = "TRWAGMYFPDXBNJZSQVHLCKE";
-    this.dniLetter = letters.charAt(dniNumber % 23);
+    this.dniLetter = this.letters.charAt(dniNumber % 23);
   }
 
   setSmoothMettersChecked() {
