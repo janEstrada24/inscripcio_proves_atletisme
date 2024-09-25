@@ -6,6 +6,7 @@ let component: RegistrationComponent;
 let fixture: ComponentFixture<RegistrationComponent>;
 let compiled: HTMLElement;
 const letters = "TRWAGMYFPDXBNJZSQVHLCKE";
+const regNumbers = new RegExp('^[0-9]+$');
 
 function getNthHeading(index:number) {
   return compiled.querySelectorAll("h1")[index]; 
@@ -21,12 +22,6 @@ function getInputFromLabel(labelIndex:number) {
 
 function getParagraphFromLabel(labelIndex:number) {
   return getNthLabel(labelIndex)!.querySelector("p");
-}
-
-function getDNILetter(dni: string) {
-  const dniNumber = parseInt(dni, 10);
-  const letter = letters.charAt(dniNumber % 23);
-  return letter;
 }
 
 describe('RegistrationComponent', () => {
@@ -55,6 +50,12 @@ describe('RegistrationComponent', () => {
   it('Has identity data', () => {
     expect(compiled.querySelectorAll("div")[0].style.border).toBe("1px solid black");
 
+    const inputDni:HTMLInputElement = getInputFromLabel(0)!;
+    const inputFederationCode:HTMLInputElement = getInputFromLabel(1)!;
+    const inputNomICognoms:HTMLInputElement = getInputFromLabel(2)!;
+    const inputPhone:HTMLInputElement = getInputFromLabel(3)!;
+    const inputEmail:HTMLInputElement = getInputFromLabel(4)!;
+
     expect(getNthHeading(1).textContent).toContain('Dades identificatives');
 
     expect(getNthLabel(0).textContent).toBe("DNI: ");
@@ -63,11 +64,11 @@ describe('RegistrationComponent', () => {
     expect(getNthLabel(3).textContent).toBe("Telèfon: ");
     expect(getNthLabel(4).textContent).toBe("Email: ");
 
-    expect(getInputFromLabel(0)).toBeTruthy();
-    expect(getInputFromLabel(1)).toBeTruthy();
-    expect(getInputFromLabel(2)).toBeTruthy();
-    expect(getInputFromLabel(3)).toBeTruthy();
-    expect(getInputFromLabel(4)).toBeTruthy();
+    expect(inputDni).toBeTruthy();
+    expect(inputFederationCode).toBeTruthy();
+    expect(inputNomICognoms).toBeTruthy();
+    expect(inputPhone).toBeTruthy();
+    expect(inputEmail).toBeTruthy();
 
     expect(getParagraphFromLabel(0)).toBeTruthy();
   });

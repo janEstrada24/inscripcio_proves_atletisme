@@ -25,10 +25,11 @@ export class RegistrationComponent {
 
   setDniLetter() {
     if (this.dni.length !== 8) {
-      return;
+      this.dniLetter = "Invalid DNI";
+    } else {
+      const dniNumber = parseInt(this.dni, 10);
+      this.dniLetter = this.letters.charAt(dniNumber % 23);
     }
-    const dniNumber = parseInt(this.dni, 10);
-    this.dniLetter = this.letters.charAt(dniNumber % 23);
   }
 
   setSmoothMettersChecked() {
