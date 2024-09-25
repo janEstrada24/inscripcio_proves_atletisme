@@ -3,30 +3,30 @@
 <div style="border: 1px solid black;">
     <section><h1>Dades identificatives</h1></section>
     <label>DNI: 
-        <input type="text">
+        <input type="text" [(ngModel)]="this.dni">
         <p></p>
     </label>
     
     <label>Codi de federat: 
-        <input type="number">
+        <input type="number" [(ngModel)]="this.codiFederat">
     </label>
     
     <br>
     
     <label>Nom i cognoms: 
-        <input type="text">
+        <input type="text" [(ngModel)]="this.nomICognoms">
     </label>
     
     <br>
     
     <label>Telèfon: 
-        <input type="tel">
+        <input type="tel" [(ngModel)]="this.telefon">
     </label>
     
     <br>
     
     <label>Email: 
-        <input type="email">
+        <input type="email" [(ngModel)]="this.email">
     </label>
 </div>
 
