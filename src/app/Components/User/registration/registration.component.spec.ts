@@ -5,8 +5,6 @@ import { RegistrationComponent } from './registration.component';
 let component: RegistrationComponent;
 let fixture: ComponentFixture<RegistrationComponent>;
 let compiled: HTMLElement;
-const letters = "TRWAGMYFPDXBNJZSQVHLCKE";
-const regNumbers = new RegExp('^[0-9]+$');
 
 function getNthHeading(index:number) {
   return compiled.querySelectorAll("h1")[index]; 
@@ -80,6 +78,9 @@ describe('RegistrationComponent', () => {
     inputEmail.value = "johnDoe@gmail.com";
 
     inputDni.dispatchEvent(new Event("input"));
+    component.setDniLetter();
+    expect(paragraphDniLetter.textContent).toBe(component.getDniLetter());
+
     inputEmail.dispatchEvent(new Event("input"));
     inputFederationCode.dispatchEvent(new Event("input"));
     inputNomICognoms.dispatchEvent(new Event("input"));
