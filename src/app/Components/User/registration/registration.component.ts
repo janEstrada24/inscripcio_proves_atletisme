@@ -14,7 +14,7 @@ export class RegistrationComponent {
   letters:string = "TRWAGMYFPDXBNJZSQVHLCKE";
   codiFederat!: number;
   nomICognoms!: string;
-  telefon!: number;
+  telefon!: string;
   email!: string;
   smoothMeters: number = 0;
   smoothMeters100: boolean = false;

@@ -71,6 +71,19 @@ describe('RegistrationComponent', () => {
     expect(inputEmail).toBeTruthy();
 
     expect(getParagraphFromLabel(0)).toBeTruthy();
+
+    inputDni.value = "12345678";
+    inputFederationCode.value = "31";
+    inputNomICognoms.value = "John Doe";
+    inputPhone.value = "999 999 999"; 
+    inputEmail.value = "johnDoe@gmail.com";
+
+    inputDni.dispatchEvent(new Event("input"));
+    inputEmail.dispatchEvent(new Event("input"));
+    inputFederationCode.dispatchEvent(new Event("input"));
+    inputNomICognoms.dispatchEvent(new Event("input"));
+    inputPhone.dispatchEvent(new Event("input"));
+    fixture.detectChanges();
   });
 
   it('Register smooth meters data', () => {
