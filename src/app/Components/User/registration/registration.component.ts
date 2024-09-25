@@ -13,7 +13,7 @@ export class RegistrationComponent {
   dniLetter!: string;
   codiFederat!: number;
   nomICognoms!: string;
-  telefon!: string;
+  telefon!: number;
   email!: string;
   smoothMeters: number = 0;
   smoothMeters100: boolean = false;
