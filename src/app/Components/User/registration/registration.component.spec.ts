@@ -51,6 +51,7 @@ describe('RegistrationComponent', () => {
     expect(compiled.querySelectorAll("div")[0].style.border).toBe("1px solid black");
 
     const inputDni:HTMLInputElement = getInputFromLabel(0)!;
+    const paragraphDniLetter:HTMLParagraphElement = getParagraphFromLabel(0)!;
     const inputFederationCode:HTMLInputElement = getInputFromLabel(1)!;
     const inputNomICognoms:HTMLInputElement = getInputFromLabel(2)!;
     const inputPhone:HTMLInputElement = getInputFromLabel(3)!;
@@ -70,7 +71,7 @@ describe('RegistrationComponent', () => {
     expect(inputPhone).toBeTruthy();
     expect(inputEmail).toBeTruthy();
 
-    expect(getParagraphFromLabel(0)).toBeTruthy();
+    expect(paragraphDniLetter).toBeTruthy();
 
     inputDni.value = "12345678";
     inputFederationCode.value = "31";
