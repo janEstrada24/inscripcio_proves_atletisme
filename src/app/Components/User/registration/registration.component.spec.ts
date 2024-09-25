@@ -66,6 +66,8 @@ describe('RegistrationComponent', () => {
 
   it('Has identity data', () => {
     fixture.detectChanges();
+    expect(compiled.querySelectorAll("div")[0].style.border).toBe("1px solid black");
+    
     expect(getNthHeading(1).textContent).toContain('Dades identificatives');
 
     expect(getNthLabel(0).textContent).toBe("DNI: ");
