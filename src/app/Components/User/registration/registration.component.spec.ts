@@ -78,7 +78,13 @@ describe('RegistrationComponent', () => {
     expect(getNthLabel(6).textContent).toBe("200 smooth meters\n");
     expect(getNthLabel(7).textContent).toBe("400 smooth meters\n");
     expect(getNthLabel(8).textContent).toBe("800 smooth meters\n");
-    expect(getNthLabel(9).textContent).toBe("1000 smooth meters\n")
+    expect(getNthLabel(9).textContent).toBe("1000 smooth meters\n");
+
+    expect(getInputFromLabel(5)?.type).toBe("checkbox");
+    expect(getInputFromLabel(6)?.type).toBe("checkbox");
+    expect(getInputFromLabel(7)?.type).toBe("checkbox");
+    expect(getInputFromLabel(8)?.type).toBe("checkbox");
+    expect(getInputFromLabel(9)?.type).toBe("checkbox");
   });
 
   it('Has a register button', () => {
