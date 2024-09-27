@@ -3,24 +3,24 @@
 <div style="border: 1px solid black;">
     <section><h1>Dades identificatives</h1></section>
     <label>DNI: 
-        <input type="text" [(ngModel)]="this.dni">
+        <input type="text" [(ngModel)]="this.dni" maxlength="8">
         <p>{{this.getDniLetter()}}</p>
     </label>
     
     <label>Codi de federat: 
-        <input type="number" [(ngModel)]="this.codiFederat">
+        <input type="number" [(ngModel)]="this.codiFederat" maxlength="2">
     </label>
 
     <label>Nom i cognoms: 
-        <input type="text" [(ngModel)]="this.nomICognoms">
+        <input type="text" [(ngModel)]="this.nomICognoms" maxlength="50">
     </label>
     
     <label>Telèfon: 
-        <input type="tel" [(ngModel)]="this.telefon">
+        <input type="tel" [(ngModel)]="this.telefon" maxlength="9">
     </label>
     
     <label>Email: 
-        <input type="email" [(ngModel)]="this.email">
+        <input type="email" [(ngModel)]="this.email" maxlength="50">
     </label>
 </div>
 

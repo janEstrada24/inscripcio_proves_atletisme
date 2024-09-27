@@ -30,7 +30,7 @@ export class RegistrationComponent {
       const dniNumber = parseInt(this.dni, 10);
       dniLetter = this.letters.charAt(dniNumber % 23);
     } else {
-      dniLetter = "Invalid DNI";
+      dniLetter = "";
     }
     return dniLetter;
   }
