@@ -44,9 +44,9 @@ describe('RegistrationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-/*});
+});
 
-describe('Identity data', () => {*/
+describe('Identity data', () => {
   it('Has identity data', () => {
     expect(compiled.querySelectorAll("div")[0].style.border).toBe("1px solid black");
 
@@ -88,8 +88,10 @@ describe('Identity data', () => {*/
     inputPhone.dispatchEvent(new Event("input"));
     fixture.detectChanges();
   });
+});
 
-  it('Register smooth meters data', () => {
+describe('Register smooth meters data', () => {
+  it('Has register smooth meters data', () => {
     expect(compiled.querySelectorAll("div")[1].style.border).toBe("1px solid black");
     expect(getNthHeading(2).textContent).toContain('Inscripció');
     
