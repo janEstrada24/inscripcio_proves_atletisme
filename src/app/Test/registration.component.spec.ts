@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegistrationComponent } from './registration.component';
+import { RegistrationComponent } from '../Components/User/registration/registration.component';
 
 let component: RegistrationComponent;
 let fixture: ComponentFixture<RegistrationComponent>;
