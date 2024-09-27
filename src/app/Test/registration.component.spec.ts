@@ -72,11 +72,16 @@ describe('Identity data', () => {
     expect(inputPhone).toBeTruthy();
     expect(inputEmail).toBeTruthy();
 
-    expect(inputDni.value.length).toBeLessThanOrEqual(inputDni.maxLength);
+    expect(inputDni.maxLength).toBe(8);
+    expect(inputFederationCode.maxLength).toBe(2);
+    expect(inputNomICognoms.maxLength).toBe(50);
+    expect(inputPhone.maxLength).toBe(9);
+    expect(inputEmail.maxLength).toBe(50);
+    /*expect(inputDni.value.length).toBeLessThanOrEqual(inputDni.maxLength);
     expect(inputFederationCode.value.length).toBeLessThanOrEqual(inputFederationCode.maxLength);
     expect(inputNomICognoms.value.length).toBeLessThanOrEqual(inputNomICognoms.maxLength);
     expect(inputPhone.value.length).toBeLessThanOrEqual(inputPhone.maxLength);
-    expect(inputEmail.value.length).toBeLessThanOrEqual(inputEmail.maxLength);
+    expect(inputEmail.value.length).toBeLessThanOrEqual(inputEmail.maxLength);*/
 
     expect(paragraphDniLetter).toBeTruthy();
 
