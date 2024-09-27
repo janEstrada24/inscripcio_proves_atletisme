@@ -20,11 +20,11 @@ export class RegistrationComponent {
   smoothMeters400: boolean = false;
   smoothMeters800: boolean = false;
   smoothMeters1000: boolean = false;
+  options: string[] = ["100 smooth meters", "200 smooth meters", "400 smooth meters", "800 smooth meters", "1000 smooth meters"];
   regNumbers:RegExp = new RegExp('^[0-9]+$');
   letters:string = "TRWAGMYFPDXBNJZSQVHLCKE";
 
   getDniLetter(): string {
-    console.log(this.dni);
     let dniLetter: string;
     if (this.dni !== undefined && this.dni.length === 8 && this.regNumbers.test(this.dni)) {
       const dniNumber = parseInt(this.dni, 10);

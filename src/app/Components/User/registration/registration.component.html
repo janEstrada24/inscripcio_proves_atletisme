@@ -4,7 +4,7 @@
     <section><h1>Dades identificatives</h1></section>
     <label>DNI: 
         <input type="text" [(ngModel)]="this.dni">
-        {{this.getDniLetter()}}
+        <p>{{this.getDniLetter()}}</p>
     </label>
     
     <label>Codi de federat: 
@@ -50,6 +50,13 @@
         <input type="checkbox" [(ngModel)]="smoothMeters1000" value="1000" class="smoothMeters" (change)="setSmoothMettersChecked()" />
         1000 smooth meters
     </label>
+
+    @for(option of options; track $index) {
+        <label>
+            <input type="checkbox" />
+            {{option}}
+        </label>
+    }
 </div>
 
 <button>Inscripció</button>
