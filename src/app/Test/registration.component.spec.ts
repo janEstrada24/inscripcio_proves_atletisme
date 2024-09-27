@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegistrationComponent } from '../Components/User/registration/registration.component';
+import { input } from '@angular/core';
 
 let component: RegistrationComponent;
 let fixture: ComponentFixture<RegistrationComponent>;
@@ -70,6 +71,12 @@ describe('Identity data', () => {
     expect(inputNomICognoms).toBeTruthy();
     expect(inputPhone).toBeTruthy();
     expect(inputEmail).toBeTruthy();
+
+    expect(inputDni.value.length).toBeLessThanOrEqual(inputDni.maxLength);
+    expect(inputFederationCode.value.length).toBeLessThanOrEqual(inputFederationCode.maxLength);
+    expect(inputNomICognoms.value.length).toBeLessThanOrEqual(inputNomICognoms.maxLength);
+    expect(inputPhone.value.length).toBeLessThanOrEqual(inputPhone.maxLength);
+    expect(inputEmail.value.length).toBeLessThanOrEqual(inputEmail.maxLength);
 
     expect(paragraphDniLetter).toBeTruthy();
 
