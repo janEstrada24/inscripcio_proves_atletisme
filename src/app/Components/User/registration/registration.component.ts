@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class RegistrationComponent {
   dni!: string;
-  dniLetter!: string;
   codiFederat!: number;
   nomICognoms!: string;
   telefon!: string;
@@ -24,17 +23,16 @@ export class RegistrationComponent {
   regNumbers:RegExp = new RegExp('^[0-9]+$');
   letters:string = "TRWAGMYFPDXBNJZSQVHLCKE";
 
-  setDniLetter() {
-    if (this.dni.length === 8 && this.regNumbers.test(this.dni)) {
+  getDniLetter(): string {
+    console.log(this.dni);
+    let dniLetter: string;
+    if (this.dni !== undefined && this.dni.length === 8 && this.regNumbers.test(this.dni)) {
       const dniNumber = parseInt(this.dni, 10);
-      this.dniLetter = this.letters.charAt(dniNumber % 23);
+      dniLetter = this.letters.charAt(dniNumber % 23);
     } else {
-      this.dniLetter = "Invalid DNI";
+      dniLetter = "Invalid DNI";
     }
-  }
-
-  getDniLetter() {
-    return this.dniLetter;
+    return dniLetter;
   }
 
   setSmoothMettersChecked() {

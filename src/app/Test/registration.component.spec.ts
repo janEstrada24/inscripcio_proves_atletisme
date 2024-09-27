@@ -44,7 +44,9 @@ describe('RegistrationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+/*});
 
+describe('Identity data', () => {*/
   it('Has identity data', () => {
     expect(compiled.querySelectorAll("div")[0].style.border).toBe("1px solid black");
 
@@ -78,7 +80,6 @@ describe('RegistrationComponent', () => {
     inputEmail.value = "johnDoe@gmail.com";
 
     inputDni.dispatchEvent(new Event("input"));
-    component.setDniLetter();
     expect(paragraphDniLetter.textContent).toEqual(component.getDniLetter());
 
     inputEmail.dispatchEvent(new Event("input"));
