@@ -4,7 +4,7 @@
     <section><h1>Dades identificatives</h1></section>
     <label>DNI: 
         <input type="text" [(ngModel)]="this.dni" (change)="setDniLetter()">
-        <p></p>
+        <p>{{this.dniLetter}}</p>
     </label>
     
     <label>Codi de federat: 
@@ -57,7 +57,5 @@
         1000 smooth meters
     </label>
 </div>
-
-<br><br>
 
 <button>Inscripció</button>
