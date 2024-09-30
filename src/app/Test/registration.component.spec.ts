@@ -93,7 +93,7 @@ describe('Identity data', () => {
     inputEmail.value = "johnDoe@gmail.com";
 
     inputDni.dispatchEvent(new Event("input"));
-    //expect(paragraphDniLetter.textContent).toEqual(component.getDniLetter());
+    expect(paragraphDniLetter.textContent).toEqual(component.getDniLetter());
 
     inputEmail.dispatchEvent(new Event("input"));
     inputFederationCode.dispatchEvent(new Event("input"));
@@ -122,6 +122,6 @@ describe('Register smooth meters data', () => {
   });
 
   it('Has a register button', () => {
-    expect(compiled.querySelector('button')?.textContent).toContain('Inscripció');
+    expect(compiled.querySelectorAll('button')[0]?.textContent).toContain('Inscripció');
   });
 });
