@@ -92,13 +92,13 @@ describe('Identity data', () => {
     inputPhone.value = "999 999 999"; 
     inputEmail.value = "johnDoe@gmail.com";
 
-    /*inputDni.dispatchEvent(new Event("input"));
+    inputDni.dispatchEvent(new Event("input"));
     //expect(paragraphDniLetter.textContent).toEqual(component.getDniLetter());
 
     inputEmail.dispatchEvent(new Event("input"));
     inputFederationCode.dispatchEvent(new Event("input"));
     inputNomICognoms.dispatchEvent(new Event("input"));
-    inputPhone.dispatchEvent(new Event("input"));*/
+    inputPhone.dispatchEvent(new Event("input"));
     fixture.detectChanges();
   });
 });
@@ -122,7 +122,6 @@ describe('Register smooth meters data', () => {
   });
 
   it('Has a register button', () => {
-    fixture.detectChanges();
     expect(compiled.querySelector('button')?.textContent).toContain('Inscripció');
   });
 });
