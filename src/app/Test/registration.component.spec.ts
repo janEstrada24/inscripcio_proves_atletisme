@@ -23,20 +23,20 @@ function getParagraphFromLabel(labelIndex:number) {
   return getNthLabel(labelIndex)!.querySelector("p");
 }
 
+beforeEach(async () => {
+  await TestBed.configureTestingModule({
+    imports: [RegistrationComponent]
+  })
+  .compileComponents();
+
+  fixture = TestBed.createComponent(RegistrationComponent);
+  component = fixture.componentInstance;
+  fixture.detectChanges();
+  compiled = fixture.nativeElement;
+});
+
+
 describe('RegistrationComponent', () => {
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [RegistrationComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(RegistrationComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    compiled = fixture.nativeElement;
-  });
-
   it('should render title Inscripcio proves atletisme', () => {
     fixture.detectChanges();
     expect(getNthHeading(0).textContent).toContain('Inscripció proves atletisme');
@@ -120,7 +120,9 @@ describe('Register smooth meters data', () => {
     expect(getInputFromLabel(8)?.type).toBe("checkbox");
     expect(getInputFromLabel(9)?.type).toBe("checkbox");
   });
+});
 
+describe('Register button', () => {
   it('Has a register button', () => {
     expect(compiled.querySelectorAll('button')[0]?.textContent).toContain('Inscripció');
   });
