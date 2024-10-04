@@ -100,6 +100,7 @@ describe('Identity data', () => {
     inputEmail.value = "johnDoe@gmail.com";
 
     inputDni.dispatchEvent(new Event("input"));
+    fixture.detectChanges();
     expect(paragraphDniLetter.textContent).toEqual(component.getDniLetter());
 
     inputEmail.dispatchEvent(new Event("input"));
@@ -107,12 +108,12 @@ describe('Identity data', () => {
     inputNomICognoms.dispatchEvent(new Event("input"));
     inputPhone.dispatchEvent(new Event("input"));
     
+    fixture.detectChanges();
     expect(inputDni.value.length).toBeLessThanOrEqual(inputDni.maxLength);
     expect(inputFederationCode.value.length).toBeLessThanOrEqual(inputFederationCode.maxLength);
     expect(inputNomICognoms.value.length).toBeLessThanOrEqual(inputNomICognoms.maxLength);
     expect(inputPhone.value.length).toBeLessThanOrEqual(inputPhone.maxLength);
     expect(inputEmail.value.length).toBeLessThanOrEqual(inputEmail.maxLength);
-    fixture.detectChanges();
   });
 });
 
