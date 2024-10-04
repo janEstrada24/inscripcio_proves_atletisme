@@ -23,20 +23,21 @@ function getParagraphFromLabel(labelIndex:number) {
   return getNthLabel(labelIndex)!.querySelector("p");
 }
 
-beforeEach(async () => {
-  await TestBed.configureTestingModule({
-    imports: [RegistrationComponent]
-  })
-  .compileComponents();
-
-  fixture = TestBed.createComponent(RegistrationComponent);
-  component = fixture.componentInstance;
-  fixture.detectChanges();
-  compiled = fixture.nativeElement;
-});
 
 
 describe('RegistrationComponent', () => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [RegistrationComponent]
+    })
+    .compileComponents();
+  
+    fixture = TestBed.createComponent(RegistrationComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    compiled = fixture.nativeElement;
+  });
+
   it('should render title Inscripcio proves atletisme', () => {
     fixture.detectChanges();
     expect(getNthHeading(0).textContent).toContain('Inscripció proves atletisme');
@@ -48,6 +49,18 @@ describe('RegistrationComponent', () => {
 });
 
 describe('Identity data', () => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [RegistrationComponent]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(RegistrationComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    compiled = fixture.nativeElement;
+  });
+
   it('Has identity data', () => {
     expect(compiled.querySelectorAll("div")[0].style.border).toBe("1px solid black");
 
@@ -104,6 +117,18 @@ describe('Identity data', () => {
 });
 
 describe('Register smooth meters data', () => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [RegistrationComponent]
+    })
+    .compileComponents();
+  
+    fixture = TestBed.createComponent(RegistrationComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    compiled = fixture.nativeElement;
+  });
+
   it('Has register smooth meters data', () => {
     expect(compiled.querySelectorAll("div")[1].style.border).toBe("1px solid black");
     expect(getNthHeading(2).textContent).toContain('Inscripció');
